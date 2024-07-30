@@ -61,4 +61,20 @@ Git鼓励大量使用分支：
 
 merge --no-ff 与 merge --ff 和merge --squash 相比，拥有可以保持分支整洁，而且可追溯的优点，所以在开发中，推荐使用 merge --no-ff 方式进行分支合并，而且在合并时，配合 --no-commit 进行合并，待检查合并完毕的文件以后再进行提交的方式为最佳方案。
 
-Git is a free software
+修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+
+当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场；
+
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。
+
+将你刚刚贮藏的工作重新应用：git stash apply。 如果想要应用其中一个更旧的贮藏，可以通过名字指定它，像这样：git stash apply stash@{2}。 如果不指定一个贮藏，Git 认为指定的是最近的贮藏：
+
+可以运行 git stash drop 加上将要移除的贮藏的名字来移除它：
+
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051 Revert "added file_size"
+stash@{2}: WIP on master: 21d80a5 added number to log
+$ git stash drop stash@{0}
+Dropped stash@{0} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
+也可以运行 git stash pop 来应用贮藏然后立即从栈上扔掉它。
