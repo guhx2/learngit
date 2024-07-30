@@ -61,3 +61,4 @@ Git鼓励大量使用分支：
 
 merge --no-ff 与 merge --ff 和merge --squash 相比，拥有可以保持分支整洁，而且可追溯的优点，所以在开发中，推荐使用 merge --no-ff 方式进行分支合并，而且在合并时，配合 --no-commit 进行合并，待检查合并完毕的文件以后再进行提交的方式为最佳方案。
 
+Git is a free software
