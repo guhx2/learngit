@@ -2,13 +2,12 @@ aaa
 branch dev
 dev222
 
-<<<<<<< HEAD
 
 master
 mmm
 
 feature1
 master
-=======
+
 dev2
->>>>>>> dev2
+
