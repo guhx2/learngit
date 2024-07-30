@@ -77,4 +77,9 @@ stash@{1}: WIP on master: c264051 Revert "added file_size"
 stash@{2}: WIP on master: 21d80a5 added number to log
 $ git stash drop stash@{0}
 Dropped stash@{0} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
-也可以运行 git stash pop 来应用贮藏然后立即从栈上扔掉它。
+也可以运行 git stash pop 来应用贮藏然后立即从栈上扔掉它。扔最新的，可以指定
+
+小结
+开发一个新功能，最好新建一个分支；
+
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
