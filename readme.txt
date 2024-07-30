@@ -92,4 +92,8 @@ Dropped stash@{0} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
 
-a
+git log --all --pretty=oneline --abbrev-commit --graph
+all显示所有分支
+–pretty=oneline 将提交信息显示为一行
+–abbrev-commit 是的输出的commitild 更简短
+–graph 以图的形式显示
